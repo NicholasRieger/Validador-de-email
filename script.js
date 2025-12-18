@@ -4,7 +4,7 @@ const resultado = document.querySelector('.resultado')
 
 function validacao(valor){
     const email = valor.trim()
-    return email.includes('@') && email.includes('.com')
+    return email.includes('@') && email.endsWith('.com')
 }
 
 botaoValidar.addEventListener('click', () => {
@@ -14,9 +14,11 @@ botaoValidar.addEventListener('click', () => {
         resultado.textContent = 'E-mail validado'
         resultado.style.color = 'green'
         inputEmail.value = ''
+        inputEmail.focus()
     } else {
         resultado.textContent = 'E-mail é inválido'
         resultado.style.color = 'red'
+        inputEmail.focus()
     }
 })
 
