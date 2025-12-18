@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    min-height: 100vh;
+    /* fallback universal */
+    min-height: 100svh;
+    /* Safari/iOS: viewport “pequena” estável */
+    min-height: 100dvh;
+    /* modernos: viewport dinâmica (ajusta com barra) */
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    background-color: rgba(157, 95, 215, 0.849);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(141, 17, 141, 0.711);
+}
+
+.container label{
+    text-align: center;
+    font-size: 1.2em;
+}
